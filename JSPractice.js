@@ -119,8 +119,19 @@ let nums = [1, 2, 3, 4, 5, 6];
 
 
 //Rest Pattern
- let [x, y, z, ...i] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
- console.log(x); 
-console.log(y); 
-console.log(z);
-console.log(i); 
+//  let [x, y, z, ...i] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//  console.log(x); 
+// console.log(y); 
+// console.log(z);
+// console.log(i); 
+
+
+
+//------------------------------Objects Destructuring------------------------------
+
+let user = {name: "Faraz", age: 22, city: "Lahore"};
+let {name, age, city} = user;
+console.log(name, age, city);
+
+let {name: username} = user;
+console.log(username);
