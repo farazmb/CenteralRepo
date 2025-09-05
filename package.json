@@ -1,0 +1,26 @@
+{
+  "name": "centeralrepo",
+  "version": "1.0.0",
+  "description": "A collaborative Repository for Tasks",
+  "main": "JSPractice.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farazmb/CenteralRepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farazmb/CenteralRepo/issues"
+  },
+  "homepage": "https://github.com/farazmb/CenteralRepo#readme",
+  "dependencies": {
+    "rxjs": "^7.8.2"
+  },
+  
+  "type": "module"  
+  
+
+}
