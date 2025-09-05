@@ -147,44 +147,44 @@ let values: number[] = [1, 2, 3, 4, 6]
 // }
 
 
-class Manager {
-    protected managers: ReadonlyArray<string> = ["John", "Wick", "vicky", "Doe"]
-    constructor() {
-        console.log("Managers are being assogned");
-    }
-}
+// class Manager {
+//     protected managers: ReadonlyArray<string> = ["John", "Wick", "vicky", "Doe"]
+//     constructor() {
+//         console.log("Managers are being assogned");
+//     }
+// }
 
-class User extends Manager {
-    Name: string = '@';
-    constructor(name: string) {
-        super();
-        this.Name = name.toLowerCase();
-    }
+// class User extends Manager {
+//     Name: string = '@';
+//     constructor(name: string) {
+//         super();
+//         this.Name = name.toLowerCase();
+//     }
 
-    managersList: ReadonlyArray<string> = this.managers
-    getManager(): void {
-        try {
+//     managersList: ReadonlyArray<string> = this.managers
+//     getManager(): void {
+//         try {
 
-            if (this.Name.startsWith("a") && this.Name.endsWith("a")) {
-                console.log(`${this.Name} has ${this.managersList[this.managersList.length - 1]} as last manager`);
-            } else {
-                throw new Error(`User "${this.Name}" is invalid!`);
-            }
-        } catch (error) {
-            if (error instanceof Error) {
-                console.error("Custom Error Caught:", error.message);
-            } else {
-                console.error("Unknown error:", error);
-            }
-        }
-    }
-}
+//             if (this.Name.startsWith("a") && this.Name.endsWith("a")) {
+//                 console.log(`${this.Name} has ${this.managersList[this.managersList.length - 1]} as last manager`);
+//             } else {
+//                 throw new Error(`User "${this.Name}" is invalid!`);
+//             }
+//         } catch (error) {
+//             if (error instanceof Error) {
+//                 console.error("Custom Error Caught:", error.message);
+//             } else {
+//                 console.error("Unknown error:", error);
+//             }
+//         }
+//     }
+// }
 
-const user1 = new User("Anna");
-user1.getManager();
+// const user1 = new User("Anna");
+// user1.getManager();
 
-const user2 = new User("Bob");
-user2.getManager();
+// const user2 = new User("Bob");
+// user2.getManager();
 
 
 //generics
@@ -200,3 +200,16 @@ user2.getManager();
 // function identity<T>(val: T) : T{
 //     return val;
 // }
+
+// function doSomething(task, callback)
+// {
+//     console.log("Task started: ", task);
+//     callback();
+// }
+
+// function afterTask()
+// {
+//     console.log("Task is finished!");
+// }
+
+// doSomething("clean the room", afterTask);
