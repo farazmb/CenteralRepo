@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callback & Event Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      transition: background-color 0.5s;
+    }
+    h1 {
+      margin-top: 50px;
+      color: #333;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <p>Hello world</p>
+
+  <h1>Click the button to change background</h1>
+  <button id="colorBtn">Change Color</button>
+
+  <script>
+    // Callback function that changes background color
+    function changeBackground() {
+      const colors = ["#f4a261", "#2a9d8f", "#e9c46a", "#264653", "#e76f51"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Event + callback
+    document.getElementById("colorBtn").addEventListener("click", changeBackground);
+  </script>
+
 </body>
 </html>
